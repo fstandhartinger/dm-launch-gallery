@@ -1,0 +1,9 @@
+plain/
+*.key
+*.mp4
+node_modules/
+posters/
+screenshots/
+gallery.json
+site/index.html
+web/

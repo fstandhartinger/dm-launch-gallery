@@ -1,0 +1,7 @@
+.git
+node_modules
+plain
+posters
+screenshots
+*.key
+*.mp4
