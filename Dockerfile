@@ -12,4 +12,7 @@ COPY --chown=node:node . .
 
 USER node
 EXPOSE 8080
-CMD ["node", "server.js"]
+# Structured JSON logs + request ids (logging standard, AGENTS.md; logkit/README.md). No IPs or user agents.
+COPY logkit ./logkit
+ENV LOG_APP=dm-launch-gallery-prod LOG_IP=0 LOG_UA=0
+CMD ["node", "-r", "./logkit/logkit-preload.cjs", "server.js"]
